@@ -1,0 +1,9 @@
+arkade
+arkade.exe
+bin/**
+kubeconfig
+.DS_Store
+.idea/
+mc
+/arkade-*
+/faas-cli*
