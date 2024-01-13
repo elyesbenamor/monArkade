@@ -1,6 +1,7 @@
 name: build and push image
 
 on:
+  repository_dispatch: 
   push:
     branches:
       - 'main'
