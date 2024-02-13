@@ -30,4 +30,11 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: elyes000/arkade:v1
+          tags: elyes000/arkade
+      - name: Create KIND Cluster
+        uses: helm/kind-action@v1.2.0
+
+    # Deploy to KIND Cluster
+      - name: Deploy to KIND
+        run: |
+          kubectl apply -f deployment.yaml
