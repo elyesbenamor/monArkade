@@ -32,10 +32,10 @@ jobs:
           push: true
           tags: elyes000/arkade
       - uses: actions/checkout@v2
+      
       - name: Create KIND Cluster
         uses: helm/kind-action@v1.2.0
 
-    # Deploy to KIND Cluster
       - name: Deploy to KIND
         run: |
           kubectl apply -f deployment.yaml
