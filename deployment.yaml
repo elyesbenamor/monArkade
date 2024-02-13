@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: arkade
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arkade
+  template:
+    metadata:
+      labels:
+        app: arkade
+    spec:
+      containers:
+      - name: arkade
+        image: elyes000/arkade
+        command: ["/bin/sh"]
+        args: ["-c", "install portainer"]
